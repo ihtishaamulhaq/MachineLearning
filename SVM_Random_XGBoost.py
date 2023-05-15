@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun May 14 09:30:06 2023
-
-@author: Ihtishaam
-"""
-
 
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn import datasets, svm
