@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat May 20 18:23:39 2023
-
-@author: Ihtishaam
-"""
 
 #Import the necessary libraries
 from sklearn.datasets import load_breast_cancer
