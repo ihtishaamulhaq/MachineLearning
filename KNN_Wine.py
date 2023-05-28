@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue May 16 18:07:57 2023
-
-@author: Ihtishaam
-"""
+# In this file we use the wine dataset fron Sklearn Dataset library
 
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
@@ -17,7 +12,6 @@ import seaborn as sns
 
 # load the dataset
 dataset= datasets.load_wine()
-
 
 # print the iris data
 print(dataset.data,"\n")
