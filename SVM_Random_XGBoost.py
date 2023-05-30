@@ -1,17 +1,14 @@
 
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn import datasets, svm
-
-
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.neighbors import KNeighborsClassifier
-# import xgboost as xgb
 from xgboost import XGBClassifier
-
-
 
 # load the dataset from sklearn libraray
 X, y = datasets.load_iris(return_X_y=True)
+
+# finding the shape of dataset
 X.shape, y.shape
 
 # use the train_test_split function to divide the data into taraining and test data. 
@@ -23,10 +20,10 @@ X_train.shape, y_train.shape
 print(X_test.shape, y_test.shape)
 
 # Here we use the SVM classifier with Linear Kernal
-clf = svm.SVC(kernel='linear', C=1)
-clf.fit(X_train, y_train)
+SVM = svm.SVC(kernel='linear', C=1)
+SVM.fit(X_train, y_train)
 
-print("SVM with linear kernel results= ",clf.score(X_test, y_test))
+print("SVM with linear kernel results= ",SVM.score(X_test, y_test))
 
 
 # random forest Regressor implemenattion on iris Dataset
