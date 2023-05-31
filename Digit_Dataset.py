@@ -1,9 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed May 24 18:12:06 2023
+# Inn this program we use the random forest classifier for digit classification.
 
-@author: Ihtishaam
-"""
 
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
