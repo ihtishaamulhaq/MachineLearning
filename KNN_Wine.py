@@ -12,19 +12,21 @@ import seaborn as sns
 
 # load the dataset
 dataset= datasets.load_wine()
+# Print the descriptip about the dataset
+print(wine.DESCR)
 
-# print the iris data
+# print the Wine data
 print(dataset.data,"\n")
 A=dataset.data
 
-#  type of the data
+#  type of the dataset
 print(type(dataset),"\n")
 
 # find the name of features
 print(dataset.feature_names,"\n") 
 
 # number of target classes
-print(dataset.target_names,"\n")
+print("Total number of classes",dataset.target_names,"\n")
 
 # target values 
 print(dataset.target,"\n")
