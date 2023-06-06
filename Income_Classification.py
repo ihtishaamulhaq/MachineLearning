@@ -83,10 +83,15 @@ plt.show()
 # Find the metrics on test Dataset
 print("\n*******  Performance Measures Evalution *******\n")
 
+# find the acuracy 
 accuracy=metrics.accuracy_score(K_test, prediction)
 print("Accuracy  : ",round(accuracy*100,2), "%\n")
+
+# Find the Jaccord Score
 J_card_score=metrics.jaccard_score(K_test, prediction)
 print("Jacccard Score : ", round(J_card_score*100,2), "%\n")
+
+# Find the Recall Score
 recall=metrics.recall_score(K_test, prediction)
 print("Recall Score : ", round(recall*100,2), "%\n")
 precision=metrics.precision_score(K_test, prediction)
