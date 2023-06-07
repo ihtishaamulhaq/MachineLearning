@@ -9,9 +9,9 @@ from termcolor import colored
 from sklearn.metrics import confusion_matrix
 import seaborn as sns
 
-
 # load the dataset
 dataset= datasets.load_wine()
+
 # Print the descriptip about the dataset
 print(wine.DESCR)
 
@@ -36,7 +36,7 @@ print(dataset.data.shape,"\n")
 
 # dataset is divided into train and test data (ratio 70:30)
 i_train, i_test, j_train, j_test = train_test_split(A, b, 
-                                    test_size=0.2, random_state=43)
+                                    test_size=0.3, random_state=43)
 
 # printing the shape of training and test data
 print(i_train.shape,"\n")
@@ -45,6 +45,7 @@ print(i_test.shape,"\n")
 # Knn classifier 
 knn = KNeighborsClassifier(n_neighbors=5, weights='distance', 
                            algorithm='auto',leaf_size=40, p=2)
+
 # train the model
 knn.fit(i_train,j_train)
 
