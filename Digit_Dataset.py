@@ -1,6 +1,5 @@
 # In this program we use the random forest classifier for digit classification.
 
-
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
@@ -26,9 +25,9 @@ conf_mat=metrics.confusion_matrix(J_test, Prediction)
 
 # draw the confusion matrix
 sns.heatmap(conf_mat, annot=True)
-plt.ylabel("prediction")
-plt.xlabel("actual")
-plt.title("confusion matrix for digit dataset",fontsize=16)
+plt.ylabel("Prediction")
+plt.xlabel("Actual")
+plt.title("Confusion Matrix for Digit Dataset",fontsize=16)
 plt.show()
 
 # compute the metrics like Accuracy, Precision, Recall, F1-score
