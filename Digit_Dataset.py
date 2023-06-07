@@ -1,4 +1,4 @@
-# Inn this program we use the random forest classifier for digit classification.
+# In this program we use the random forest classifier for digit classification.
 
 
 from sklearn import datasets
