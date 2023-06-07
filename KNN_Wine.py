@@ -71,9 +71,11 @@ print("\n")
 
 # round the value upto two decimal places
 score = metrics.accuracy_score(j_test, y_predict) 
-score1 = metrics.recall_score(j_test, y_predict, average='micro') 
+score1 = metrics.recall_score(j_test, y_predict, average='micro')
+score2 = metrics.precision_score(j_test, y_predict, average='micro')
 scores = round(score*100,2)
 scores1 = round(score1*100,2)
+scores2 = round(score2*100,2)
 print("Accuracy =",scores, "%")
 print("Recall   =",scores1, "%")
-
+print("Precision=",scores2, "%")
