@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue May 30 20:54:18 2023
-
-@author: Ihtishaam
-"""
-
 import pandas as pd
 from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
