@@ -70,13 +70,17 @@ plt.title('Confusion Matrix',fontsize=18)
 plt.show()
 print("\n")
 
-# round the value upto two decimal places
+# Compute the Evaluation Score
 score = metrics.accuracy_score(j_test, y_predict) 
 score1 = metrics.recall_score(j_test, y_predict, average='micro')
 score2 = metrics.precision_score(j_test, y_predict, average='micro')
+
+# round the value upto two decimal places
 scores = round(score*100,2)
 scores1 = round(score1*100,2)
 scores2 = round(score2*100,2)
+
+# Print the results
 print("Accuracy =",scores, "%")
 print("Recall   =",scores1, "%")
 print("Precision=",scores2, "%")
