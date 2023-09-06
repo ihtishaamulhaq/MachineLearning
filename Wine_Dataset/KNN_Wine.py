@@ -1,4 +1,4 @@
-# In this file we use the wine dataset fron Sklearn Dataset library
+# In this file, we use the wine dataset from the Sklearn Dataset library
 
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
