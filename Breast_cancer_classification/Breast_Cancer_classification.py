@@ -11,21 +11,27 @@ from sklearn.metrics import confusion_matrix
 
  
 # Load the breast cancer dataset from Sklearn
-data= load_breast_cancer()
+data= load_breast_cancer(as_frame=True)
 
-#
+# The data matrix
 dataset=data.data
 print(dataset)
 
-# Print the target names
-labels=data.target_names
-print(labels)
+# Target names 
+targetName=data.target_names
+print(targetName)
 
-# How Many features are ...
-features=data.feature_names
-print(features)
+# Column names / feature names
+column=data.feature_names
+print(column)
 
-# Print the targets 
+# Description about the dataset
+print(data.DESCR)
+
+# Show the first five records
+print(data.frame.head())
+
+# Target values/ labels
 targets=data.target
 print(targets)
 
