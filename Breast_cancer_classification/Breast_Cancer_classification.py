@@ -30,7 +30,7 @@ targets=data.target
 print(targets)
 
 # Split the Dataset into train and test dataset 
-i_train, i_test, j_train, j_test = train_test_split(data, targets, test_size=0.3, random_state=56)
+i_train, i_test, j_train, j_test = train_test_split(dataset, targets, test_size=0.3, random_state=56)
 
 # Train the model
 gnbc = GaussianNB()  
