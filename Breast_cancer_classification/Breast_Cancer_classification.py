@@ -11,10 +11,26 @@ from sklearn.metrics import confusion_matrix
 
  
 # Load the breast cancer dataset from Sklearn
-A, b = load_breast_cancer(return_X_y=True)
+data= load_breast_cancer()
+
+#
+dataset=data.data
+print(dataset)
+
+# Print the target names
+labels=data.target_names
+print(labels)
+
+# How Many features are ...
+features=data.feature_names
+print(features)
+
+# Print the targets 
+targets=data.target
+print(targets)
 
 # Split the Dataset into train and test dataset 
-i_train, i_test, j_train, j_test = train_test_split(A, b, test_size=0.3, random_state=56)
+i_train, i_test, j_train, j_test = train_test_split(data, targets, test_size=0.3, random_state=56)
 
 # Train the model
 gnbc = GaussianNB()  
