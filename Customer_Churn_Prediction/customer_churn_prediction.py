@@ -4,6 +4,9 @@ Created on Sun Sep 24 12:10:18 2023
 
 @author: Ihtishaam
 """
+# This dataset is taken from Kaggle. To get dataset please follow the link
+#  https://www.kaggle.com/code/mervetorkan/churn-prediction/input
+
 
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
