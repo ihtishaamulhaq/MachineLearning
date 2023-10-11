@@ -46,6 +46,7 @@ print(customer_data.duplicated().sum())
 print(customer_data['Geography'].unique())
 print(customer_data['Gender'].unique())
 
+
 # Now we use the  Data encoding technique to replace the 
 # categorical data into numerical data , we use LabelEncoder from 
 # Sklearn module 
@@ -124,4 +125,47 @@ sns.countplot(customer_data, x='Exited')
 plt.savefig("Count_plot.png")
 plt.show()
 
+print(customer_data['Exited'].value_counts())
+sns.countplot(customer_data, x='Exited')
+plt.savefig("Count_plot.png")
+plt.show()
+
+df_exited=customer_data[customer_data['Exited']==1]
+df_not_exited=customer_data[customer_data['Exited']==0]
+print(df_exited)
+print(df_not_exited)
+
+no_exited=df_not_exited.sample(n=2037)
+print(no_exited.shape)
+
+df_new=pd.concat([df_exited, no_exited],axis=0)
+print(df_new.shape)
+
+data=df_new.drop(['Exited'], axis=1)
+print(data.shape)
+label=df_new['Exited']
+print(label.shape)
+
+x_train, x_test, y_train, y_test=train_test_split(data, label, test_size=0.3, random_state=23)
+print(x_train.shape)
+
+#  Model training and testing (KNeighborsClassifier)
+KNN_Classifier=KNeighborsClassifier(n_neighbors=14, weights='distance',
+                                    algorithm='auto',leaf_size=20, p=2)
+KNN_Classifier.fit(x_train,y_train)
+Y_predict=KNN_Classifier.predict(x_test)
+
+
+# compute and display the confusion matrix
+cm_k=confusion_matrix(y_test,Y_predict)
+sns.heatmap(cm_k, annot=True, cmap='plasma', fmt='d', cbar=False)
+plt.title("Confusion Matrix using K Nearest Neighbors", fontsize=14)
+plt.xlabel("Actual")
+plt.ylabel("Predicted")
+plt.savefig("Confusion_Matrix_for_KNN.png")
+plt.show()
+
+# Compute the Accuracy score
+classification_report_k=classification_report(y_test, Y_predict)
+print("********** Classification Reopt ********** = ","\n", classification_report_k,)
 
