@@ -1,9 +1,6 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Oct 15 10:54:12 2023
+# Please download the dataset from the kaggle site
+# https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud/data
 
-@author: Ihtishaam
-"""
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
