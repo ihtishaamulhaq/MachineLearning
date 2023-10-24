@@ -4,6 +4,7 @@ from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import GridSearchCV
+
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn import metrics
@@ -12,7 +13,7 @@ from sklearn import metrics
 dataset=pd.read_csv('income_evaluation.csv')
 
 # head () is used to show the first 5 samples
-print(dataset.head())
+print(dataset.head(10))
 
 # total number of records
 print("<<<< Total number of records >>>>\n",dataset.shape)
