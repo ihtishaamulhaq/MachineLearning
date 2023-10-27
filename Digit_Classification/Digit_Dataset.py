@@ -12,20 +12,40 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn import metrics
 import seaborn as sns
+import pandas as pd
 import matplotlib.pyplot as plt
 
 # load the dataset from Sklearn (datasets library)
-A, b=datasets.load_digits(return_X_y=True)
-print(A.shape)
-print(b.shape)
+Digit_Dataset=datasets.load_digits(as_frame=True)
 
+#  shape of the dataset
+features=Digit_Dataset.data
+print(Digit_Dataset.data.shape)
 
+# Show the target names
+targets=Digit_Dataset.target
+print(targets)
+print(Digit_Dataset.target_names)
+
+# distribution plot of the dataset
+plt.figure(figsize=(8,8))
+sns.countplot(x=targets)
+plt.title("Dittribution Plot",fontsize=14)
+plt.savefig("distribution.png")
+plt.show()
 
 # Split the dataset into training and testing 
-I_train, I_test, J_train, J_test=train_test_split(A, b, test_size=0.3) 
+I_train, I_test, J_train, J_test=train_test_split(features, 
+                                                  targets, 
+                                                  test_size=0.3) 
 
 # train the model
-R_F_Classifier=RandomForestClassifier(random_state=62)
+R_F_Classifier=RandomForestClassifier(n_estimators=50,
+                                      max_depth=10,
+                                      criterion='gini',
+                                      min_samples_split=4,
+                                      min_samples_leaf=1,
+                                      random_state=42)
 R_F_Classifier.fit(I_train, J_train)
 
 # model testing
@@ -35,12 +55,13 @@ Prediction=R_F_Classifier.predict(I_test)
 conf_mat=metrics.confusion_matrix(J_test, Prediction)
 
 # Display the confusion matrix
-sns.heatmap(conf_mat, annot=True, fmt='d', cmap='plasma', cbar=False)
+plt.figure(figsize=(8,8))
+sns.heatmap(conf_mat, annot=True, fmt='d', cmap='crest', cbar=False)
 plt.xlabel("actual")
 plt.ylabel("prediction")
 plt.title("Confusion Matrix on Digit Dataset",fontsize=16)
-# plt.show()
-plt.savefig("confusion Matrix.png")
+plt.savefig("confusion_Matrix.png")
+plt.show()
 
 # compute the metrics like Accuracy, Precision, Recall, F1-score
 score=metrics.accuracy_score(J_test, Prediction)
