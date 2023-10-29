@@ -5,12 +5,12 @@ Here I use machine learning algorithms for beginners.
 I took these datasets from different sources like SKlearn / Kaggle.
 <h2>Types of Machine Learning:</h2>
 
-Supervised Learning: In this type, the algorithm is trained on a labeled dataset, and it learns to make predictions or decisions based on input features. Examples include image classification and spam email detection.
-Unsupervised Learning: Algorithms in this category work with unlabeled data, identifying patterns or grouping similar data points. Clustering and dimensionality reduction are examples of unsupervised learning.
-Reinforcement Learning: This involves training agents to make sequences of decisions in an environment to maximize a reward. It's commonly used in applications like game playing and robotics.
+<h4>Supervised Learning:</h4> In this type, the algorithm is trained on a labeled dataset, and it learns to make predictions or decisions based on input features. Examples include image classification and spam email detection.
+<h4>Unsupervised Learning:</h4> Algorithms in this category work with unlabeled data, identifying patterns or grouping similar data points. Clustering and dimensionality reduction are examples of unsupervised learning.
+<h4>Reinforcement Learning:</h4> This involves training agents to make sequences of decisions in an environment to maximize a reward. It's commonly used in applications like game playing and robotics.
 <h2>Common Machine Learning Algorithms:</h2>
-
-Linear Regression
+<ol></ol>
+<item>Linear Regression</item>
 Decision Trees
 Random Forest
 Support Vector Machines
