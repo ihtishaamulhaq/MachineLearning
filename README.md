@@ -9,15 +9,24 @@ I took these datasets from different sources like SKlearn / Kaggle.
 <h4>Unsupervised Learning:</h4> Algorithms in this category work with unlabeled data, identifying patterns or grouping similar data points. Clustering and dimensionality reduction are examples of unsupervised learning.
 <h4>Reinforcement Learning:</h4> This involves training agents to make sequences of decisions in an environment to maximize a reward. It's commonly used in applications like game playing and robotics.
 <h2>Common Machine Learning Algorithms:</h2>
-<ol></ol>
-<item>Linear Regression</item>
-Decision Trees
-Random Forest
-Support Vector Machines
-Naive Bayes
-K-Nearest Neighbors
-Neural Networks
-Deep Learning (a subset of neural networks)
+<ol>
+  <li>Linear Regression</li>
+  <li>Decision Trees</li>
+  <li>Random Forest</li>
+  <li>Support Vector Machines</li>
+  <li>Naive Bayes</li>
+  <li>K-Nearest Neighbors</li>
+  <li>Neural Networks</li>
+  <li>Deep Learning (a subset of neural networks)</li>
+</ol>
+
+
+
+
+
+
+
+
 <h2>Applications and Uses:</h2>
 
 Image and Speech Recognition: Machine learning is used in facial recognition, object detection, and speech-to-text systems.
