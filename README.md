@@ -2,7 +2,7 @@
 <p> Machine learning is a subset of artificial intelligence (AI) that focuses on the development of algorithms and statistical models that enable computer systems to learn and make predictions or decisions without being explicitly programmed. In other words, it's about teaching machines to learn from data and improve their performance over time.</p>
 <b>NOTE:</b><p>In this repository, I will perform statistical machine learning algorithms on Sklearn datasets.
 Here, I use machine learning algorithms for beginners.
-I took these datasets from different sources, like <a href="https://scikit-learn.org/stable/">scikit-learn</a> and <a htef="https://www.kaggle.com/">Kaggle</a>.</p>
+I took these datasets from different sources, like <a href="https://scikit-learn.org/stable/">scikit-learn</a> and <a href="https://www.kaggle.com/">Kaggle</a>.</p>
 <h2>Types of Machine Learning:</h2>
 
 <h4>Supervised Learning:</h4> In this type, the algorithm is trained on a labeled dataset, and it learns to make predictions or decisions based on input features. Examples include image classification and spam email detection.
